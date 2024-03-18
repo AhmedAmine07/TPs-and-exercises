@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        form#ex02 {
+            margin-top: 50px;
+        }
+        table {
+            align-items: center;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 1px solid #0f0f0f;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #141313;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        #resultContainer {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        #result1{
+            text-align:left;
+        }
+
+        #result{
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulaire Étudiant</h2>
+    <form id="formulaire">
+    <label for="code">Code étudiant:</label><br>
+    <input type="text" id="code" name="code"><br><br>
+
+    <label for="nom">Nom étudiant:</label><br>
+    <input type="text" id="nom" name="nom"><br><br>
+
+    <label for="prenom">Prénom étudiant:</label><br>
+    <input type="text" id="prenom" name="prenom"><br><br>
+
+    <label for="semestre">Semestre:</label><br>
+    <select id="semestre" name="semestre">
+      <option value="">Sélectionner un semestre</option>
+      <option value="1">Semestre 1</option>
+      <option value="2">Semestre 2</option>
+    </select><br><br>
+
+    <label for="note1">Note module 1:</label><br>
+    <input type="text" id="note1" name="note1"><br><br>
+
+    <label for="note2">Note module 2:</label><br>
+    <input type="text" id="note2" name="note2"><br><br>
+
+    <label for="note3">Note module 3:</label><br>
+    <input type="text" id="note3" name="note3"><br><br>
+
+    <label for="note4">Note module 4:</label><br>
+    <input type="text" id="note4" name="note4"><br><br>
+
+    <label for="note5">Note module 5:</label><br>
+    <input type="text" id="note5" name="note5"><br><br>
+
+    <label for="note6">Note module 6:</label><br>
+    <input type="text" id="note6" name="note6"><br><br>
+
+    <button type="submit" onclick="validerFormulaire(event)">Valider</button>
+  </form>
+
+    
+  <div id="display" style="display:none;">
+    <h2>Résultats</h2>
+    <table id="tableau">
+        <thead>
+          <tr>
+            <th>Code étudiant</th>
+            <th>Nom étudiant</th>
+            <th>Prénom étudiant</th>
+            <th>Semestre</th>
+            <th>Note module 1</th>
+            <th>Note module 2</th>
+            <th>Note module 3</th>
+            <th>Note module 4</th>
+            <th>Note module 5</th>
+            <th>Note module 6</th>
+            <th>Résultat</th>
+            <th>Décision</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+  </div>
+    
+    <script src="app3.js"></script>
+</body>
+</html>

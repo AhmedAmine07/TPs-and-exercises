@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        form#ex02 {
+            margin-top: 50px;
+        }
+        table {
+            align-items: center;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 1px solid #0f0f0f;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #141313;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        #resultContainer {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        #result1{
+            text-align:left;
+        }
+
+        #result{
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    
+    <h2><b>Formulaire d'inscription</b></h2>
+    <form class="ex01">
+        <label for="nom">Nom :</label>
+            <input type="text" id="nom"> <br><br>
+        <label for="prenom">Prenom :</label>
+            <input type="text" id="prenom"> <br><br>
+        <label for="email">E-mail :</label>
+            <input type="text" id="email"> <br><br>
+        <label for="mdp">Mot de passe :</label>
+            <input  type="text" id="mdp"></input><br><br>
+        <label for="mdpc">Resaisir le mot de passe :</label>
+            <input type="text" id="mdpc"> <br><br>
+        <label for="tel">Telephone :</label>
+            <input type="text" id="tel"> <br><br>
+        <label>Langue :</label>    
+        <select id="langue" selected="anglais">
+                <option value="anglais">Anglais</option>
+                <option value="francais">Francais</option>
+                <option value="arabe">Arabe</option>
+            </select><br><br>
+        <label for="com">Commentaire :</label>
+            <textarea id="com"></textarea> <br><br>
+        <button type="submit"  onclick="validerFormulaire(event)">Valider</button>
+        <button type="reset">Annuler</button> <br> <br>
+    </form>
+
+    <div id="resultContainer"><div id="result1"></div></div>
+    
+    
+    <script src="TP3ex01.js"></script>
+</body>
+</html>
